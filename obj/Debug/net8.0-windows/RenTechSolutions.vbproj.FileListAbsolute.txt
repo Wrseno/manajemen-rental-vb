@@ -32,3 +32,5 @@ C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-w
 C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-windows\RenTechSolutions.FormBeranda.resources
 C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-windows\RenTechSolutions.Resources.resources
 C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-windows\RenTechSolutions.FormDataBarang.resources
+C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-windows\RenTechSolutions.sourcelink.json
+C:\Users\warse\source\repos\RenTechSolutions\RenTechSolutions\obj\Debug\net8.0-windows\RenTechSolutions.FormKategori.resources

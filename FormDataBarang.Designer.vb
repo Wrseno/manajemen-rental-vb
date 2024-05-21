@@ -26,11 +26,14 @@ Partial Class FormDataBarang
         Label2 = New Label()
         DataGridView1 = New DataGridView()
         GroupBox1 = New GroupBox()
+        Panel8 = New Panel()
+        txtIdBarang = New TextBox()
+        picReturn = New PictureBox()
         picClear = New PictureBox()
         picDelete = New PictureBox()
         picSearch = New PictureBox()
-        v = New PictureBox()
-        picSimpan = New PictureBox()
+        picEdit = New PictureBox()
+        picSave = New PictureBox()
         Panel7 = New Panel()
         cmbStatus = New ComboBox()
         Panel6 = New Panel()
@@ -45,14 +48,17 @@ Partial Class FormDataBarang
         txtBrand = New TextBox()
         Panel1 = New Panel()
         txtNamaBarang = New TextBox()
-        PictureBox1 = New PictureBox()
+        Panel9 = New Panel()
+        txtStok = New TextBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
+        Panel8.SuspendLayout()
+        CType(picReturn, ComponentModel.ISupportInitialize).BeginInit()
         CType(picClear, ComponentModel.ISupportInitialize).BeginInit()
         CType(picDelete, ComponentModel.ISupportInitialize).BeginInit()
         CType(picSearch, ComponentModel.ISupportInitialize).BeginInit()
-        CType(v, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picSimpan, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picEdit, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picSave, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
         Panel6.SuspendLayout()
         Panel5.SuspendLayout()
@@ -60,7 +66,7 @@ Partial Class FormDataBarang
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
         Panel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel9.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label1
@@ -99,12 +105,14 @@ Partial Class FormDataBarang
         ' GroupBox1
         ' 
         GroupBox1.BackColor = Color.LightSeaGreen
-        GroupBox1.Controls.Add(PictureBox1)
+        GroupBox1.Controls.Add(Panel9)
+        GroupBox1.Controls.Add(Panel8)
+        GroupBox1.Controls.Add(picReturn)
         GroupBox1.Controls.Add(picClear)
         GroupBox1.Controls.Add(picDelete)
         GroupBox1.Controls.Add(picSearch)
-        GroupBox1.Controls.Add(v)
-        GroupBox1.Controls.Add(picSimpan)
+        GroupBox1.Controls.Add(picEdit)
+        GroupBox1.Controls.Add(picSave)
         GroupBox1.Controls.Add(Panel7)
         GroupBox1.Controls.Add(Panel6)
         GroupBox1.Controls.Add(Panel5)
@@ -113,12 +121,41 @@ Partial Class FormDataBarang
         GroupBox1.Controls.Add(Panel2)
         GroupBox1.Controls.Add(Panel1)
         GroupBox1.ForeColor = Color.White
-        GroupBox1.Location = New Point(12, 376)
+        GroupBox1.Location = New Point(12, 358)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(757, 256)
+        GroupBox1.Size = New Size(757, 283)
         GroupBox1.TabIndex = 13
         GroupBox1.TabStop = False
         GroupBox1.Text = "Data Barang"
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.White
+        Panel8.Controls.Add(txtIdBarang)
+        Panel8.Location = New Point(13, 30)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(244, 44)
+        Panel8.TabIndex = 12
+        ' 
+        ' txtIdBarang
+        ' 
+        txtIdBarang.BorderStyle = BorderStyle.None
+        txtIdBarang.Location = New Point(6, 10)
+        txtIdBarang.Name = "txtIdBarang"
+        txtIdBarang.Size = New Size(235, 24)
+        txtIdBarang.TabIndex = 0
+        ' 
+        ' picReturn
+        ' 
+        picReturn.BackColor = Color.Turquoise
+        picReturn.BackgroundImageLayout = ImageLayout.Zoom
+        picReturn.Image = My.Resources.Resources.R__4_
+        picReturn.Location = New Point(659, 168)
+        picReturn.Name = "picReturn"
+        picReturn.Size = New Size(75, 58)
+        picReturn.SizeMode = PictureBoxSizeMode.Zoom
+        picReturn.TabIndex = 11
+        picReturn.TabStop = False
         ' 
         ' picClear
         ' 
@@ -156,35 +193,35 @@ Partial Class FormDataBarang
         picSearch.TabIndex = 8
         picSearch.TabStop = False
         ' 
-        ' v
+        ' picEdit
         ' 
-        v.BackColor = Color.Turquoise
-        v.BackgroundImageLayout = ImageLayout.Zoom
-        v.Image = My.Resources.Resources.edit_icon_png_14
-        v.Location = New Point(578, 104)
-        v.Name = "v"
-        v.Size = New Size(75, 58)
-        v.SizeMode = PictureBoxSizeMode.Zoom
-        v.TabIndex = 7
-        v.TabStop = False
+        picEdit.BackColor = Color.Turquoise
+        picEdit.BackgroundImageLayout = ImageLayout.Zoom
+        picEdit.Image = My.Resources.Resources.edit_icon_png_14
+        picEdit.Location = New Point(578, 104)
+        picEdit.Name = "picEdit"
+        picEdit.Size = New Size(75, 58)
+        picEdit.SizeMode = PictureBoxSizeMode.Zoom
+        picEdit.TabIndex = 7
+        picEdit.TabStop = False
         ' 
-        ' picSimpan
+        ' picSave
         ' 
-        picSimpan.BackColor = Color.Turquoise
-        picSimpan.BackgroundImageLayout = ImageLayout.Zoom
-        picSimpan.Image = My.Resources.Resources.Save_Button_PNG_Transparent_Images
-        picSimpan.Location = New Point(578, 40)
-        picSimpan.Name = "picSimpan"
-        picSimpan.Size = New Size(75, 58)
-        picSimpan.SizeMode = PictureBoxSizeMode.Zoom
-        picSimpan.TabIndex = 6
-        picSimpan.TabStop = False
+        picSave.BackColor = Color.Turquoise
+        picSave.BackgroundImageLayout = ImageLayout.Zoom
+        picSave.Image = My.Resources.Resources.Save_Button_PNG_Transparent_Images
+        picSave.Location = New Point(578, 40)
+        picSave.Name = "picSave"
+        picSave.Size = New Size(75, 58)
+        picSave.SizeMode = PictureBoxSizeMode.Zoom
+        picSave.TabIndex = 6
+        picSave.TabStop = False
         ' 
         ' Panel7
         ' 
         Panel7.BackColor = Color.White
         Panel7.Controls.Add(cmbStatus)
-        Panel7.Location = New Point(285, 200)
+        Panel7.Location = New Point(285, 185)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(274, 44)
         Panel7.TabIndex = 4
@@ -202,7 +239,7 @@ Partial Class FormDataBarang
         ' 
         Panel6.BackColor = Color.White
         Panel6.Controls.Add(txtSpek)
-        Panel6.Location = New Point(285, 121)
+        Panel6.Location = New Point(285, 106)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(274, 75)
         Panel6.TabIndex = 2
@@ -220,7 +257,7 @@ Partial Class FormDataBarang
         ' 
         Panel5.BackColor = Color.White
         Panel5.Controls.Add(txtDeskripsi)
-        Panel5.Location = New Point(285, 40)
+        Panel5.Location = New Point(285, 26)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(274, 75)
         Panel5.TabIndex = 1
@@ -238,7 +275,7 @@ Partial Class FormDataBarang
         ' 
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(txtHarga)
-        Panel4.Location = New Point(13, 200)
+        Panel4.Location = New Point(13, 227)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(244, 44)
         Panel4.TabIndex = 2
@@ -255,7 +292,7 @@ Partial Class FormDataBarang
         ' 
         Panel3.BackColor = Color.White
         Panel3.Controls.Add(cmbKategori)
-        Panel3.Location = New Point(13, 148)
+        Panel3.Location = New Point(13, 177)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(244, 44)
         Panel3.TabIndex = 2
@@ -272,7 +309,7 @@ Partial Class FormDataBarang
         ' 
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(txtBrand)
-        Panel2.Location = New Point(13, 94)
+        Panel2.Location = New Point(13, 128)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(244, 44)
         Panel2.TabIndex = 1
@@ -289,7 +326,7 @@ Partial Class FormDataBarang
         ' 
         Panel1.BackColor = Color.White
         Panel1.Controls.Add(txtNamaBarang)
-        Panel1.Location = New Point(13, 40)
+        Panel1.Location = New Point(13, 79)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(244, 44)
         Panel1.TabIndex = 0
@@ -302,17 +339,22 @@ Partial Class FormDataBarang
         txtNamaBarang.Size = New Size(235, 24)
         txtNamaBarang.TabIndex = 0
         ' 
-        ' PictureBox1
+        ' Panel9
         ' 
-        PictureBox1.BackColor = Color.Turquoise
-        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Image = My.Resources.Resources.R__4_
-        PictureBox1.Location = New Point(659, 168)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(75, 58)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 11
-        PictureBox1.TabStop = False
+        Panel9.BackColor = Color.White
+        Panel9.Controls.Add(txtStok)
+        Panel9.Location = New Point(285, 232)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(274, 44)
+        Panel9.TabIndex = 3
+        ' 
+        ' txtStok
+        ' 
+        txtStok.BorderStyle = BorderStyle.None
+        txtStok.Location = New Point(7, 10)
+        txtStok.Name = "txtStok"
+        txtStok.Size = New Size(254, 24)
+        txtStok.TabIndex = 0
         ' 
         ' FormDataBarang
         ' 
@@ -328,11 +370,14 @@ Partial Class FormDataBarang
         Text = "FormDataBarang"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
+        Panel8.ResumeLayout(False)
+        Panel8.PerformLayout()
+        CType(picReturn, ComponentModel.ISupportInitialize).EndInit()
         CType(picClear, ComponentModel.ISupportInitialize).EndInit()
         CType(picDelete, ComponentModel.ISupportInitialize).EndInit()
         CType(picSearch, ComponentModel.ISupportInitialize).EndInit()
-        CType(v, ComponentModel.ISupportInitialize).EndInit()
-        CType(picSimpan, ComponentModel.ISupportInitialize).EndInit()
+        CType(picEdit, ComponentModel.ISupportInitialize).EndInit()
+        CType(picSave, ComponentModel.ISupportInitialize).EndInit()
         Panel7.ResumeLayout(False)
         Panel6.ResumeLayout(False)
         Panel5.ResumeLayout(False)
@@ -343,7 +388,8 @@ Partial Class FormDataBarang
         Panel2.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel9.ResumeLayout(False)
+        Panel9.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -367,10 +413,14 @@ Partial Class FormDataBarang
     Friend WithEvents Panel6 As Panel
     Friend WithEvents txtSpek As RichTextBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents v As PictureBox
-    Friend WithEvents picSimpan As PictureBox
+    Friend WithEvents picEdit As PictureBox
+    Friend WithEvents picSave As PictureBox
     Friend WithEvents picDelete As PictureBox
     Friend WithEvents picSearch As PictureBox
     Friend WithEvents picClear As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picReturn As PictureBox
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents txtIdBarang As TextBox
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents txtStok As TextBox
 End Class

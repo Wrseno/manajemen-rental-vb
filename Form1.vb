@@ -2,13 +2,13 @@
 
 Public Class Form1
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If txtUsername.Text = "" Then
+        If txtUsername.Text = "Username" Or txtUsername.Text = "" Then
             MessageBox.Show("Masukkan username", "Input tidak boleh kosong", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtUsername.Focus()
             Exit Sub
         End If
 
-        If txtPassword.Text = "" Then
+        If txtPassword.Text = "Password" Or txtPassword.Text = "" Then
             MessageBox.Show("Masukkan password", "Input tidak boleh kosong", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtPassword.Focus()
             Exit Sub
@@ -19,7 +19,7 @@ Public Class Form1
                 db.Close()
             End If
             db.Open()
-            sqlCommand = New MySqlCommand("select * from users where username=@username and password=@password", db)
+            sqlCommand = New MySqlCommand("SELECT * FROM users WHERE username=@username and password=@password", db)
             sqlCommand.Parameters.AddWithValue("@username", txtUsername.Text)
             sqlCommand.Parameters.AddWithValue("@password", txtPassword.Text)
 
@@ -76,5 +76,9 @@ Public Class Form1
 
         txtPassword.Text = "Password"
         txtPassword.ForeColor = Color.DarkGray
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 End Class

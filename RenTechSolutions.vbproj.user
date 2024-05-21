@@ -10,5 +10,8 @@
     <Compile Update="FormDataBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
