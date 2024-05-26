@@ -45,6 +45,26 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "CrystalReports.Engine": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
+            "CrystalReports.ReportAppServer.ClientDoc": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
+            "CrystalReports.ReportAppServer.CommonControls": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
+            "CrystalReports.ReportAppServer.Controllers": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
+            "CrystalReports.Shared": {
+              "target": "Package",
+              "version": "[13.0.4003, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.4.0, )"

@@ -1,25 +1,9 @@
 ﻿Public Class FormKategori
     Private Sub FormKategori_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtIdKategori.Text = "ID Kategori"
-        txtIdKategori.ForeColor = Color.DarkGray
         txtNama.Text = "Nama"
         txtNama.ForeColor = Color.DarkGray
 
         DataGridView1.DataSource = getKategori()
-    End Sub
-
-    Private Sub txtIdKategori_GotFocus(sender As Object, e As EventArgs) Handles txtIdKategori.GotFocus
-        If txtIdKategori.Text = "ID Kategori" Then
-            txtIdKategori.Text = ""
-            txtIdKategori.ForeColor = Color.Black
-        End If
-    End Sub
-
-    Private Sub txtIdKategori_LostFocus(sender As Object, e As EventArgs) Handles txtIdKategori.LostFocus
-        If txtIdKategori.Text = "" Then
-            txtIdKategori.Text = "ID Kategori"
-            txtIdKategori.ForeColor = Color.DarkGray
-        End If
     End Sub
 
     Private Sub txtNama_GotFocus(sender As Object, e As EventArgs) Handles txtNama.GotFocus
@@ -43,8 +27,7 @@
 
     Private Sub picSave_Click(sender As Object, e As EventArgs) Handles picSave.Click
         Try
-            addKategori(txtIdKategori.Text, txtNama.Text)
-            MessageBox.Show("Kategori berhasil ditambahkan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            addKategori(txtNama.Text)
         Catch ex As Exception
             MsgBox(ex.Message)
             MsgBox("Isi data dengan benar", MsgBoxStyle.Critical, "Message")
@@ -54,8 +37,7 @@
     End Sub
 
     Private Sub picSearch_Click(sender As Object, e As EventArgs) Handles picSearch.Click
-        clearKategori()
-        DataGridView1.DataSource = getKategori()
+        DataGridView1.DataSource = getKategoriById(txtIdKategori.Text)
     End Sub
 
     Private Sub picEdit_Click(sender As Object, e As EventArgs) Handles picEdit.Click
@@ -70,7 +52,6 @@
         If result = DialogResult.Yes Then
             Try
                 editKategori(idKategori, txtNama.Text)
-                MessageBox.Show("Kategori berhasil diubah.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MsgBox(ex.Message)
                 MsgBox("Isi data dengan benar", MsgBoxStyle.Critical, "Message")
@@ -97,7 +78,6 @@
         If result = DialogResult.Yes Then
             Try
                 deleteKategori(idKategori)
-                MessageBox.Show("Kategori berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MsgBox(ex.Message)
                 MsgBox("Isi data dengan benar", MsgBoxStyle.Critical, "Message")

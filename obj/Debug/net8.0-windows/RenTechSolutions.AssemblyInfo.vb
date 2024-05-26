@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("RenTechSolutions"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16eed1748f28f979c408ea835206d174ec6c2b05"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79b12bc708a58fa3c3c60ad34d13e036168bddde"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("RenTechSolutions"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("RenTechSolutions"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

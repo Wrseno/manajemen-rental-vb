@@ -16,7 +16,7 @@
         cmbStatus.ForeColor = Color.DarkGray
         cmbKategori.Text = "Kategori"
         cmbKategori.ForeColor = Color.DarkGray
-        txtStok.Text = "Kategori"
+        txtStok.Text = "Stok"
         txtStok.ForeColor = Color.DarkGray
 
         DataGridView1.DataSource = getTableBarang()
@@ -183,7 +183,6 @@
             Dim idKategori As Integer = CInt(cmbKategori.SelectedValue)
             addBarang(txtIdBarang.Text, txtNamaBarang.Text, txtBrand.Text, idKategori,
                       txtSpek.Text, txtDeskripsi.Text, CInt(txtHarga.Text), cmbStatus.SelectedItem.ToString(), CInt(txtStok.Text))
-            MessageBox.Show("Data barang berhasil ditambahkan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As InvalidCastException
             MessageBox.Show("Pilih kategori yang valid.", "Input tidak valid", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Catch ex As Exception
@@ -212,8 +211,7 @@
             Try
                 Dim idKategori As Integer = CInt(cmbKategori.SelectedValue)
                 editBarang(idBarang, txtNamaBarang.Text, txtBrand.Text, idKategori,
-                        txtSpek.Text, txtDeskripsi.Text, CInt(txtHarga.Text), cmbStatus.SelectedItem.ToString())
-                MessageBox.Show("Data barang berhasil diubah.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        txtSpek.Text, txtDeskripsi.Text, CInt(txtHarga.Text), cmbStatus.SelectedItem.ToString(), CInt(txtStok.Text))
             Catch ex As InvalidCastException
                 MessageBox.Show("Pilih kategori yang valid.", "Input tidak valid", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Catch ex As Exception
@@ -248,7 +246,6 @@
             Try
                 deleteBarang(idBarang)
                 DataGridView1.DataSource = getTableBarang()
-                MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Catch ex As Exception
                 MessageBox.Show("Terjadi kesalahan saat menghapus data: " & ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try

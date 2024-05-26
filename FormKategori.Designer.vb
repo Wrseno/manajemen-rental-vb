@@ -67,6 +67,7 @@ Partial Class FormKategori
         ' 
         ' txtIdKategori
         ' 
+        txtIdKategori.BackColor = Color.White
         txtIdKategori.BorderStyle = BorderStyle.None
         txtIdKategori.Location = New Point(6, 10)
         txtIdKategori.Name = "txtIdKategori"
